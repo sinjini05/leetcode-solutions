@@ -134,11 +134,11 @@ vector <int> preorder(Node* root)
     vector<int> ans;
     
     if(root!=NULL){
-     ans.push_back(root->data);
+    ans.push_back(root->data);
     
     vector<int> left=preorder(root->left);
     
-    //params-> position, size and value
+    //params-> position, iterator1 and iterator2
     ans.insert(ans.end(), left.begin(), left.end());
     
     vector<int> right=preorder(root->right);
